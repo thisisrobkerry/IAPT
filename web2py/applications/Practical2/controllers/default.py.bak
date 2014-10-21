@@ -1,0 +1,5 @@
+# -*- coding: utf-8 -*-
+# @IAPT: Very simple controller
+
+def index():
+    return dict(features = db(db.Products).select(join=db.Features.on(db.Features.id==db.Products.id)))

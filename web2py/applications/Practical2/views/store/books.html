@@ -1,0 +1,16 @@
+{{extend 'congo-layout.html'}}
+<h2>Books</h2>
+<div class="product">
+        {{for product in products:}}
+        <div class="product">
+        {{=H3(product.name)}}
+        <ul>
+            <li><strong>Publisher:</strong> {{=product.publisher}}</li>
+            <li><strong>Type:</strong> {{=product.type}}</li>
+            <li><strong>Price:</strong> {{=product.price}}</li>
+            <li><strong>Description:</strong> {{=product.description}}</li>
+
+        </ul>
+        </div>
+        {{pass}}
+</div>

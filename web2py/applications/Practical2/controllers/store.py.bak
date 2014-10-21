@@ -1,0 +1,5 @@
+def books():
+    return dict(books= db(db.Products.type == 'Book').select())
+
+def videos():
+    return dict()
