@@ -1,0 +1,28 @@
+{{extend 'congo-layout.html'}}
+
+    <!-- @IAPT: A div that you can style for your introductory text -->
+    <div id="intro">
+        <p>Welcome one and all to the newly release Congo Online Shop. Here you will find books, videos and more all
+            delivered to your door!*</p>
+
+        <p id="proviso">*Delivery not yet available.</p>
+    </div>
+
+<h2>Features</h2>
+
+<!-- @IAPT: you can do DIV elements as helpers, but I find them very awkward to do as you have long stretches
+of code contained within brackets that can be hard to match up -->
+<div class="featured">
+        {{for feature in features:}}
+        <div class="product">
+        {{=H3(feature.name)}}
+        <ul>
+            <li><strong>Publisher:</strong> {{=feature.publisher}}</li>
+            <li><strong>Type:</strong> {{=feature.type}}</li>
+            <li><strong>Price:</strong> {{=feature.price}}</li>
+            <li><strong>Description:</strong> {{=feature.description}}</li>
+
+        </ul>
+        </div>
+        {{pass}}
+</div>
