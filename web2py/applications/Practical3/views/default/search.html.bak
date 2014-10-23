@@ -2,3 +2,7 @@
 <h2>Search</h2>
 {{=form}}
 {{=BEAUTIFY(response.flash)}}
+{{for result in results:}}
+<div class="searchresult">
+    {{=BEAUTIFY(results.result)}}
+</div>
