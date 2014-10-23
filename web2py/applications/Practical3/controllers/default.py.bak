@@ -5,4 +5,11 @@ def index():
     return dict(features=db(db.Products.id==db.Features.product_id).select())
 
 def search():
-    return dict()
+    form=FORM('Search Products', INPUT(_name='search', requires=IS_NOT_EMPTY()), INPUT(_type='submit'))
+    if form.accepts(request, session):
+        response.flash = 'form accepted'
+    elif form.errors:
+        response.flash = 'form has errors'
+    else:
+        response.flash = 'Please enter a search term'
+    return dict(form=form)

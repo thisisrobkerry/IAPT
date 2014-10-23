@@ -1,11 +1,5 @@
 {{extend 'congo-layout.html'}}
 <h2>Search</h2>
-<div class="search">
-    <form name = "search" action="" method="post">
-        <input type = "search" name = "search">
-        <input type = "submit" value = "Search">
-    </form>
-    <ul>
-        <li>{{=request.vars.search}}</li>
-    </ul>
-</div>
+{{=form}}
+{{=BEAUTIFY(response.flash)}}
+{{=BEAUTIFY(request.vars)}}
